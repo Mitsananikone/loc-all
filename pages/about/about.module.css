@@ -1,0 +1,124 @@
+/* === About Component Styles === */
+
+/* Center Container */
+.centerContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  width: 100%;
+  min-height: 80vh; /* Use minHeight instead of height for flexibility */
+  padding: 20px;
+  background-color: var(--background-color);
+  max-width: 100vw; /* Ensure it doesn't exceed the viewport width */
+  box-sizing: border-box; /* Include padding in the height calculation */
+}
+
+/* Background Container */
+.background {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+}
+
+/* Logo and Title Container */
+.logoTitleContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+/* Logo Image */
+.logoImage {
+  height: 100px; /* Set height */
+  width: 100px; /* Set width to match height */
+  border-radius: 50%; /* Ensure it's a circle */
+  object-fit: cover; /* Maintain aspect ratio */
+}
+
+/* Title */
+.title {
+  font-size: 1.6rem;
+  color: var(--primary-color);
+  margin: 0;
+  text-align: center;
+}
+
+/* Parallelogram Wrapper */
+.parallelogramWrapper {
+  position: relative;
+  z-index: 1;
+  width: 90%; /* Use percentage for responsiveness */
+  max-width: 800px; /* Limit maximum width */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  margin-bottom: 20px; /* Space between the two parallelograms */
+}
+
+/* Parallelogram Content */
+.parallelogramContent {
+  position: relative;
+  z-index: 1;
+  text-align: left;
+  transform: skew(20deg);
+  padding: 30px; /* Increased padding to ensure text stays inside */
+  color: var(--primary-color);
+  font-size: medium;
+  width: 100%; /* Ensure content takes full width */
+  box-sizing: border-box; /* Include padding in width calculation */
+  overflow: hidden; /* Prevent text from overflowing */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 480px) {
+  .parallelogramWrapper {
+    width: 150%; /* Make the parallelogram 200% wider on small screens */
+  }
+
+  .parallelogramContent {
+    font-size: medium; /* Smaller font size for mobile */
+    padding: 20px; /* Adjust padding for smaller screens */
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .parallelogramWrapper {
+    width: 150%; /* Make the parallelogram 150% wider on tablets */
+  }
+
+  .parallelogramContent {
+    font-size: medium; /* Medium font size for tablets */
+    padding: 25px; /* Adjust padding for tablets */
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .parallelogramWrapper {
+    width: 120%; /* Make the parallelogram 120% wider on small desktops */
+  }
+
+  .parallelogramContent {
+    font-size: large; /* Larger font size for small desktops */
+    padding: 30px; /* Adjust padding for small desktops */
+  }
+}
+
+@media (min-width: 1025px) {
+  .parallelogramWrapper {
+    width: 100%; /* Default width for desktops */
+  }
+
+  .parallelogramContent {
+    font-size: medium; /* Default font size for desktops */
+    padding: 30px; /* Default padding for desktops */
+  }
+}
