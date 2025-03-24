@@ -96,7 +96,7 @@ img {
 /* Mobile (up to 480px) */
 @media (max-width: 480px) {
   html {
-    font-size: 15px; /* Small font size for mobile */
+    font-size: 13px; /* Small font size for mobile */
   }
 
   .contentRow {
