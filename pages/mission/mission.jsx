@@ -63,7 +63,12 @@ function Mission() {
   };
 
   const getAllVerses = (verse) => {
-    return verse.split(" & ");
+    // Split the verse into parts using " & "
+    const parts = verse.split(" & ");
+    // Extract the book name from the first part (e.g., "Romans 3:10-12" -> "Romans")
+    const bookName = parts[0].split(" ")[0];
+    // Add the book name to any subsequent parts that lack it
+    return parts.map((part) => (part.includes(" ") ? part : `${bookName} ${part}`));
   };
 
   const renderPointWithVerses = (point) => {

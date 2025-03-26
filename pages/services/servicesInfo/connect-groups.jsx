@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import styles from "./servicesInfo.module.css"; // Import the CSS module
 
 function ConnectGroups({ onClose }) {
   const router = useRouter();
@@ -28,77 +29,6 @@ function ConnectGroups({ onClose }) {
     "/images/ConnectGroups/connect-group-3.jpg",
   ];
 
-  const styles = {
-    centerContainer: {
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "center",
-      alignItems: "center",
-      backgroundColor: "white",
-      padding: "10px",
-      overflow: "hidden",
-      maxWidth: "100vw",
-      marginTop: "2vh",
-    },
-    title: {
-      fontSize: "1.5rem",
-      color: "var(--primary-color)",
-      textAlign: "center",
-      marginBottom: "20px",
-    },
-    carouselContainer: {
-      width: "100%",
-      maxWidth: "800px",
-      aspectRatio: "16 / 9",
-      marginBottom: "20px",
-      borderRadius: "10px",
-      overflow: "hidden",
-      boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)",
-      position: "relative",
-    },
-    carouselImage: {
-      width: "100%",
-      height: "100%",
-      objectFit: "cover",
-      margin: 0,
-      padding: 0,
-      boxSizing: "border-box",
-      border: "1px solid var(--primary-color)",
-    },
-    thumbnailContainer: {
-      display: "flex",
-      justifyContent: "center",
-      flexWrap: "wrap",
-      gap: "10px",
-      marginTop: "10px",
-      maxWidth: "100%",
-      padding: "0 10px",
-    },
-    thumbnail: {
-      width: "60px",
-      height: "60px",
-      borderRadius: "5px",
-      cursor: "pointer",
-      borderWidth: "2px",
-      borderStyle: "solid",
-      borderColor: "transparent",
-      objectFit: "cover",
-      opacity: 0.5,
-      transition: "opacity 0.3s ease, border-color 0.3s ease",
-    },
-    activeThumbnail: {
-      opacity: 1,
-      borderColor: "var(--primary-color)",
-    },
-    description: {
-      fontSize: "1rem",
-      lineHeight: "1.6",
-      color: "var(--primary-color)",
-      textAlign: "left",
-      padding: "0 10px",
-    },
-  };
-
   // Function to handle thumbnail click
   const handleThumbnailClick = (index) => {
     setCurrentSlide(index);
@@ -106,21 +36,21 @@ function ConnectGroups({ onClose }) {
   };
 
   return (
-    <div style={styles.centerContainer}>
+    <div className={styles.centerContainer}>
       {/* Header */}
-      <h1 style={styles.title}>
+      <h1 className={styles.title}>
         <i className="fa-solid fa-book-bible" aria-hidden="true"></i> Connect Groups
       </h1>
 
       {/* Carousel */}
-      <div style={styles.carouselContainer}>
+      <div className={styles.carouselContainer}>
         <Slider {...carouselSettings} ref={sliderRef} initialSlide={currentSlide}>
           {carouselImages.map((image, index) => (
             <div key={index}>
               <img
                 src={image}
                 alt={`Connect Groups Image ${index + 1}`}
-                style={styles.carouselImage}
+                className={styles.carouselImage}
               />
             </div>
           ))}
@@ -128,23 +58,22 @@ function ConnectGroups({ onClose }) {
       </div>
 
       {/* Thumbnails */}
-      <div style={styles.thumbnailContainer}>
+      <div className={styles.thumbnailContainer}>
         {carouselImages.map((image, index) => (
           <img
             key={index}
             src={image}
             alt={`Thumbnail ${index + 1}`}
-            style={{
-              ...styles.thumbnail,
-              ...(index === currentSlide && styles.activeThumbnail),
-            }}
+            className={`${styles.thumbnail} ${
+              index === currentSlide ? styles.activeThumbnail : ""
+            }`}
             onClick={() => handleThumbnailClick(index)}
           />
         ))}
       </div>
 
       {/* Description */}
-      <div style={styles.description}>
+      <div className={styles.description}>
         <p>
           <br />
           Our Connect Groups are a vibrant community where members come together
@@ -152,24 +81,24 @@ function ConnectGroups({ onClose }) {
           another. Each week of the month has a unique focus:
         </p>
         <p>
-          <br/>
+          <br />
           <u>1st Week:</u> New member introductions, socializing, and
           enjoying a meal together at a local restaurant.
         </p>
         <p>
-        <br/>
+          <br />
           <u>2nd Week:</u> Men's Connect Group - A time for men to
           fellowship, share a meal, and participate in workshops on spreading
           the Word of the Lord.
         </p>
         <p>
-        <br/>
+          <br />
           <u>3rd Week:</u> Women's Connect Group - A space for women
           to connect, enjoy a meal, and engage in workshops focused on sharing
           their faith.
         </p>
         <p>
-        <br/>
+          <br />
           <u>4th Week:</u> Combined Men & Women's Connect Group - A
           joint gathering for all members to socialize, dine together, and
           participate in faith-building workshops.

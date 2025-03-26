@@ -8,6 +8,7 @@ import Location from "./location/location"; // Import the new component
 import About from "./about/about";
 import Donations from "./donations/donations";
 import Contact from "./contact/contact";
+import Footer from "./footer/footer";
 import ScreenWidthDisplay from "@/components/screenWidthDisplay/ScreenWidthDisplay";
 
 const styles = {
@@ -105,6 +106,11 @@ export default function Home() {
           <section id="contact" style={styles.section}>
             <Contact />
           </section>
+        </div>
+
+        <div style={styles.background}>
+            <Footer />
+
         </div>
       </div>
 

@@ -1,0 +1,114 @@
+/* homepage.module.css */
+
+@keyframes slideInLeft {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInRight {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .homeContainer {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    max-width: 100vw;
+    overflow: auto;
+    overflow-x: hidden;
+  }
+  
+  .contentContainer {
+    flex: 1;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+  }
+  
+  .imageGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 100px;
+    gap: 0px;
+    justify-items: center;
+    align-items: center;
+    padding: 0px;
+    width: 100%;
+    height: 50%;
+    max-width: 300px;
+    margin: 8vh auto;
+    background-color: var(--background-color);
+  }
+  
+  .resizedImage {
+    width: 100%;
+    height: 80%;
+    max-width: 60%;
+    object-fit: contain;
+    border-radius: 8px;
+    background-color: var(--background-color);
+    transition: opacity 1.5s ease-in-out;
+    margin: 0 auto;
+  }
+  
+  .parallelogramContent {
+    position: relative;
+    z-index: 1;
+    text-align: left;
+    transform: skew(20deg);
+    height: 100%;
+    width: 100%;
+  }
+  
+  .parallelogramImage {
+    position: relative;
+    z-index: 2;
+    text-align: left;
+    transform: skew(20deg);
+    height: 100%;
+    width: 100%;
+  }
+  
+  .title {
+    color: var(--secondary-color);
+  }
+  
+  .separationLine {
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, white 33%, rgba(255, 255, 255, 0.5) 33%, rgba(255, 255, 255, 0.5) 100%);
+    margin-top: 40px;
+  }
+  
+  .subtitle {
+    color: var(--secondary-color);
+  }
+  
+  /* Animation classes */
+  .animateLeft {
+    opacity: 0;
+    z-index: 1;
+    animation: slideInLeft 1.5s ease-out forwards;
+  }
+  
+  .animateRight {
+    opacity: 0;
+    z-index: 2;
+    animation: slideInRight 1.5s ease-out forwards;
+  }
