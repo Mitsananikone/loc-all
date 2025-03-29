@@ -6,26 +6,17 @@ const TermsOfUse = () => {
   const router = useRouter();
 
   const handleBackClick = () => {
-    if (window.history.length > 1) {
-      // If there's previous page in history
-      router.back();
+    // Always navigate to home page first
+    router.push('/', undefined, { scroll: false }).then(() => {
+      // Use setTimeout to ensure the page is fully loaded
       setTimeout(() => {
+        // Scroll to the absolute bottom of the page
         window.scrollTo({
-          top: document.documentElement.scrollHeight,
+          top: document.documentElement.scrollHeight || document.body.scrollHeight,
           behavior: 'smooth'
         });
-      }, 100);
-    } else {
-      // If no history, go to home and scroll to bottom
-      router.push('/').then(() => {
-        setTimeout(() => {
-          window.scrollTo({
-            top: document.documentElement.scrollHeight,
-            behavior: 'smooth'
-          });
-        }, 100);
-      });
-    }
+      }, 100); // 100ms delay to allow page to render
+    });
   };
 
   return (

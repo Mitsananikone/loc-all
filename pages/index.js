@@ -27,7 +27,6 @@ const styles = {
   background: {
     height: "auto", // Auto height for mobile
     width: "100%", // Full width on mobile
-    margin: "10px 0", // Reduced margin for mobile
     padding: "0px", // Reduced padding for mobile
   },
   section: {
