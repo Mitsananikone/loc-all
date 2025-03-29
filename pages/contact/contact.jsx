@@ -173,7 +173,7 @@ function Contact() {
   return (
     <div style={styles.contactContainer}>
       {/* Social Media Box */}
-      <div style={styles.socialMediaBox}>
+      {/* <div style={styles.socialMediaBox}>
         <h2 style={styles.socialMediaTitle}>Follow us on <br />social media!</h2>
         <div style={styles.socialMediaIcons}>
           {isClient && (
@@ -221,7 +221,7 @@ function Contact() {
             </>
           )}
         </div>
-      </div>
+      </div> */}
 
       {/* Form Wrapper */}
       <div style={styles.formWrapper}>

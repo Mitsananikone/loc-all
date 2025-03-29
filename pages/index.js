@@ -49,73 +49,70 @@ export default function Home() {
   }, [router.query]); // Run this effect when the query parameter changes
   return (
     <>
-    <div className="responsive-wrapper">
-      <div style={styles.centerContainer}>
-        {/* HomePage Section */}
+      <div className="responsive-wrapper">
+        <div style={styles.centerContainer}>
+          {/* HomePage Section */}
+          <div style={styles.background}>
+            <section id="home" style={styles.section}>
+              <HomePage />
+            </section>
+          </div>
+
+          {/* MeetThePerrins Section */}
+          <div style={styles.background}>
+            <section id="meetPerrins" style={styles.section}>
+              <MeetThePerrins />
+            </section>
+          </div>
+
+          {/* Mission Section */}
+          <div style={styles.background}>
+            <section id="mission" style={styles.section}>
+              <Mission />
+            </section>
+          </div>
+
+          {/* Services Section */}
+          <div style={styles.background}>
+            <section id="services" style={styles.section}>
+              <Services />
+            </section>
+          </div>
+
+          {/* Location Section */}
+          <div style={styles.background}>
+            <section id="location" style={styles.section}>
+              <Location />
+            </section>
+          </div>
+
+          {/* About Section */}
+          <div style={styles.background}>
+            <section id="about" style={styles.section}>
+              <About />
+            </section>
+          </div>
+
+          {/* Donation Section */}
+          <div style={styles.background}>
+            <section id="donations" style={styles.section}>
+              <Donations />
+            </section>
+          </div>
+
+          {/* Contact Section */}
+          <div style={styles.background}>
+            <section id="contact" style={styles.section}>
+              <Contact />
+            </section>
+          </div>
+        </div>
+        </div>
         <div style={styles.background}>
-          <section id="home" style={styles.section}>
-            <HomePage />
-          </section>
+          <Footer />
         </div>
 
-        {/* MeetThePerrins Section */}
-        <div style={styles.background}>
-          <section id="meetPerrins" style={styles.section}>
-            <MeetThePerrins />
-          </section>
-        </div>
-
-        {/* Mission Section */}
-        <div style={styles.background}>
-          <section id="mission" style={styles.section}>
-            <Mission />
-          </section>
-        </div>
-
-        {/* Services Section */}
-        <div style={styles.background}>
-          <section id="services" style={styles.section}>
-            <Services />
-          </section>
-        </div>
-
-        {/* Location Section */}
-        <div style={styles.background}>
-          <section id="location" style={styles.section}>
-            <Location />
-          </section>
-        </div>
-
-        {/* About Section */}
-        <div style={styles.background}>
-          <section id="about" style={styles.section}>
-            <About />
-          </section>
-        </div>
-
-        
-        {/* Donation Section */}
-        <div style={styles.background}>
-          <section id="donations" style={styles.section}>
-            <Donations />
-          </section>
-        </div>
-
-        {/* Contact Section */}
-        <div style={styles.background}>
-          <section id="contact" style={styles.section}>
-            <Contact />
-          </section>
-        </div>
-
-        <div style={styles.background}>
-            <Footer />
-
-        </div>
-      </div>
-
-      {/* <ScreenWidthDisplay /> */}
-      </div>
+      
     </>
   );
 }
