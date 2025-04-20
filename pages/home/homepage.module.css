@@ -1,34 +1,14 @@
 /* homepage.module.css */
 
-@keyframes slideInLeft {
-    from {
-      transform: translateX(-100%);
-      opacity: 0;
-    }
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-  
-  @keyframes slideInRight {
-    from {
-      transform: translateX(100%);
-      opacity: 0;
-    }
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
   
   .homeContainer {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    max-height: 100vh;
     max-width: 100vw;
-    overflow: auto;
-    overflow-x: hidden;
+    overflow: hidden;
+
+    /* border: 1px solid blue; */
   }
   
   .contentContainer {
@@ -39,6 +19,7 @@
     justify-content: center;
     align-items: center;
     overflow: visible;
+    /* border: 1px solid red; */
   }
   
   .imageGrid {
@@ -79,7 +60,7 @@
   .parallelogramImage {
     position: relative;
     z-index: 2;
-    text-align: left;
+    /* text-align: left; */
     transform: skew(20deg);
     height: 100%;
     width: 100%;
@@ -100,6 +81,29 @@
     color: var(--secondary-color);
   }
   
+  
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
   /* Animation classes */
   .animateLeft {
     opacity: 0;

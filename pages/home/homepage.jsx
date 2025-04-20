@@ -42,26 +42,37 @@ function HomePage() {
         {/* First Parallelogram - slides in from left */}
         <div className={styles.animateLeft}>
           <Parallelogram
-            width={screenWidth < 768 ? "90vw" : "50vw"}
+            width={screenWidth < 768 ? "70vw" : screenWidth < 1024 ? "60vw" : "40vw"}
+            
             height={screenWidth < 768 ? "60vh" : "70vh"}
             color="var(--primary-color)"
             top="5vh"
-            left="10vw"
+            left={
+              screenWidth < 768 ? "12vw" : screenWidth < 1024 ? "8vw" : "0vw" // Further right on large screens
+            }
             zIndex="1"
             scale="1"
           >
             <div className={styles.parallelogramContent}>
-              <h1 className={styles.title} style={dynamicStyles.title}>LIVING</h1>
-              <h1 className={styles.title} style={dynamicStyles.title}>OAKS</h1>
-              <h1 className={styles.title} style={dynamicStyles.title}>CHURCH</h1>
+              <h1 className={styles.title} style={dynamicStyles.title}>
+                LIVING
+              
+                OAKS
+             
+                CHURCH
+              </h1>
               <h6>
                 <p style={{ color: "white" }}>
-                  ...that they may be called oaks of righteousness, the planting of the Lord, that he may be glorified.
+                  ...that they may be called oaks of righteousness, the planting
+                  of the Lord, that he may be glorified.
                   <br /> - Isaiah 61:3
                 </p>
               </h6>
               <div className={styles.separationLine}></div>
-              <h4 className={styles.subtitle}>Leading REAL people <br/> with REAL hurts to find REAL hope in Jesus.</h4>
+              <h4 className={styles.subtitle}>
+                Leading REAL people <br /> with REAL hurts to find REAL hope in
+                Jesus.
+              </h4>
             </div>
           </Parallelogram>
         </div>
@@ -69,13 +80,20 @@ function HomePage() {
         {/* Second Parallelogram - slides in from right */}
         <div className={styles.animateRight}>
           <Parallelogram
-            width={screenWidth < 768 ? "40vw" : "30vw"}
-            height={screenWidth < 768 ? "45vh" : "50vh"}
-            top="12vh"
-            left={screenWidth < 768 ? "10vw" : "40vw"}
+            width={
+              screenWidth < 768 ? "40vw" : screenWidth < 1024 ? "30vw" : "auto" // Wider on large screens
+            }
+      
+            height={
+              screenWidth < 768 ? "45vh" : screenWidth < 1024 ? "50vh" : "60vh" // Taller on large screens
+            }
+            top="10vh"
+            left={
+              screenWidth < 768 ? "20vw" : screenWidth < 1024 ? "16vh" : "10vh" // Further right on large screens
+            }
             backImage="url('/images/LOCoakHomepage.jpg')"
             zIndex="2"
-            scale="1.5"
+            scale="2"
           >
             <div className={styles.parallelogramImage}></div>
           </Parallelogram>
@@ -83,15 +101,17 @@ function HomePage() {
       </div>
 
       <footer className={styles.imageGrid}>
-        {["cred_heights", "cred_GCBA", "cred_SBTC", "cred_NAMB"].map((img, index) => (
-          <img
-            key={index}
-            src={`/images/${img}.png`}
-            alt={img}
-            className={styles.resizedImage}
-            style={{...dynamicStyles.resizedImage}}
-          />
-        ))}
+        {["cred_heights", "cred_GCBA", "cred_SBTC", "cred_NAMB"].map(
+          (img, index) => (
+            <img
+              key={index}
+              src={`/images/${img}.png`}
+              alt={img}
+              className={styles.resizedImage}
+              style={{ ...dynamicStyles.resizedImage }}
+            />
+          )
+        )}
       </footer>
     </div>
   );
