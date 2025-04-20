@@ -54,13 +54,13 @@ function HomePage() {
             scale="1"
           >
             <div className={styles.parallelogramContent}>
-              <h2 className={styles.title} style={dynamicStyles.title}>
+              <h1 className={styles.title} style={dynamicStyles.title}>
                 LIVING  
               
                 OAKS  
              
                 CHURCH  
-              </h2>
+              </h1>
               <h6 style={{ color: "white" }}>
                 
                   ...that they may be called oaks of righteousness, the planting
