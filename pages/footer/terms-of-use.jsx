@@ -60,7 +60,7 @@ const TermsOfUse = () => {
       </section>
 
       <div className={styles.contactSection}>
-        <h3>Contact Us</h3>
+        <h2>Contact Us</h2>
         <p>Living Oaks Church<br />
         [Cary's email]<br />
         [Cary's Phone number]</p>
