@@ -1,6 +1,6 @@
 import dynamic from "next/dynamic";
 import Head from "next/head";
-import { Analytics } from '@vercel/analytics/next';
+import { Analytics } from "@vercel/analytics/next";
 import "@/styles/globals.css";
 
 // Dynamically import Navbar with SSR disabled
@@ -13,11 +13,17 @@ export default function App({ Component, pageProps }) {
     <>
       <Head>
         {/* Default SEO */}
-        <title key="default-title">Living Oaks Church | Real Hope in Jesus</title>
-        <meta 
-          name="description" 
-          content="Leading REAL people with REAL hurts to find REAL hope in Jesus Christ." 
-          key="description" 
+
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="theme-color" content="#000000" />
+        <title key="default-title">
+          Living Oaks Church | Real Hope in Jesus
+        </title>
+        <meta
+          name="description"
+          content="Leading REAL people with REAL hurts to find REAL hope in Jesus Christ."
+          key="description"
         />
 
         {/* Favicon Setup */}
@@ -29,7 +35,6 @@ export default function App({ Component, pageProps }) {
         {/* Theme Color */}
         <meta name="theme-color" content="#ffffff" />
       </Head>
-
       <Navbar /> {/* Client-side only Navbar */}
       <Component {...pageProps} />
       <Analytics mode="production" /> {/* Vercel Analytics */}
