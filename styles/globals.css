@@ -1,0 +1,295 @@
+/* === Root Variables for Theme Colors === */
+:root {
+  --primary-color: #171F37;      /* Primary brand color */
+  --secondary-color: #897349;   /* Secondary accent color */
+  --secondary-color-light: #A89A7B; 
+  --background-color: #ffffff;  /* Background color */
+  --foreground-color: #ededed;  /* Foreground color */
+
+  /* Breakpoints for responsive design */
+  --breakpoint-mobile: 480px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-desktop: 1024px;
+  --breakpoint-large: 1500px;
+
+  /* Default font size */
+  --base-font-size: 16px;
+}
+
+/* === Font Faces with Better Fallbacks === */
+@font-face {
+  font-family: 'Coco Pro Bold';
+  src: local('Coco Pro Bold'),
+       local('CocoPro-Bold'),
+       url('/fonts/cocomat-pro-bold.ttf') format('truetype'),
+       url('/fonts/cocomat-pro-bold.woff') format('woff'),
+       url('/fonts/cocomat-pro-bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bebas Neue Pro Bold';
+  src: local('Bebas Neue Pro Bold'),
+       local('BebasNeuePro-Bold'),
+       url('/fonts/bebasneuepro-bold.otf') format('opentype'),
+       url('/fonts/bebasneuepro-bold.woff') format('woff'),
+       url('/fonts/bebasneuepro-bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* === Global Reset with Enhanced Compatibility === */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
+}
+
+html {
+  font-family: 'Coco Pro Bold', 'Bebas Neue Pro Bold', Arial, sans-serif;
+  background-color: var(--background-color);
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-size: var(--base-font-size);
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: 'Coco Pro Bold', 'Bebas Neue Pro Bold', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow-x: hidden;
+  line-height: 1.5;
+  color: var(--foreground-color);
+  display: flex;
+  flex-direction: column;
+}
+
+/* === Links with Better Accessibility === */
+a {
+  color: inherit;
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0.1);
+}
+
+a:hover,
+a:focus,
+a:active {
+  text-decoration: underline;
+  outline: none; /* Remove default outline and replace with custom */
+}
+
+/* Focus styles for keyboard navigation */
+:focus-visible {
+  outline: 2px solid var(--secondary-color);
+  outline-offset: 2px;
+}
+
+/* === Images with Intrinsic Ratio === */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-style: none; /* Remove border on images inside links in IE */
+}
+
+/* SVG fallback */
+svg {
+  fill: currentColor;
+}
+
+/* === Responsive Adjustments === */
+
+/* Mobile (up to 480px) */
+@media (max-width: 480px) {
+  html {
+    font-size: 15px;
+  }
+
+  body {
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  }
+
+  .contentRow {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profileImage {
+    margin-bottom: 15px;
+  }
+
+  .description {
+    text-align: center;
+  }
+}
+
+/* Tablet (481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+/* Tablet Landscape / Small Desktop (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  html {
+    font-size: 20px;
+  }
+
+  .responsive-wrapper {
+    margin-left: 10vw;
+    margin-right: 10vw;
+  }
+}
+
+/* Desktop (1025px to 1499px) */
+@media (min-width: 1025px) and (max-width: 1499px) {
+  html {
+    font-size: 20px;
+  }
+
+  .responsive-wrapper {
+    margin-left: 20vw;
+    margin-right: 20vw;
+  }
+}
+
+/* Extra Large Screens (1500px and above) */
+@media (min-width: 1500px) {
+  html {
+    font-size: 20px;
+  }
+
+  .responsive-wrapper {
+    margin-left: 30vw;
+    margin-right: 30vw;
+  }
+
+  .thumbnail {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* === Cross-Browser Compatibility Fixes === */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  -webkit-appearance: none; /* Remove default styling on iOS */
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0; /* Fix rounded corners on iOS */
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+/* Remove inner padding and border in Firefox */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/* Correct cursor style */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  cursor: pointer;
+}
+
+/* === Scrollbar Styling with Fallbacks === */
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--secondary-color) var(--background-color);
+}
+
+/* WebKit browsers */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px; /* For horizontal scrollbars */
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-color-light);
+}
+
+/* === Print Styles === */
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  /* Don't show links that are fragment identifiers */
+  a[href^="#"]::after {
+    content: "";
+  }
+}
+
+/* === Safe Area Insets for Notched Devices === */
+@supports (padding: max(0px)) {
+  body {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
