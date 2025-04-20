@@ -185,7 +185,7 @@ function Mission() {
           <div className={styles.popup} ref={popupRef}>
             {selectedVerses.map((verse, index) => (
               <div key={index}>
-                <h3>{verse}</h3>
+                <h2>{verse}</h2>
                 <p>{bibleVerses[verse]}</p>
                 <br />
               </div>
