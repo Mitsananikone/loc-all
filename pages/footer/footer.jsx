@@ -19,7 +19,7 @@ const Footer = () => {
       <div className={styles.footerContent}>
         {/* Contact Information */}
         <div className={styles.footerSection}>
-          <h3 className={styles.footerHeading}>Contact Us</h3>
+          <h3 className={styles.footerHeading}>Contact Information</h3>
           <ul className={styles.contactList}>
             <li>
               <FaMapMarkerAlt className={styles.icon} />
