@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+Allow: /about
+Allow: /contact
+Allow: /donations
+Allow: /location
+Allow: /meetPerrins
+Allow: /services
+Allow: /resources
+
+Disallow: /api/
+Disallow: /footer/
+Disallow: /plan/
+Disallow: /admin/
+Disallow: /login/
+Disallow: /wp-admin/
+Disallow: /private/
+
+Sitemap: https://loc-all.vercel.app/sitemap.xml
