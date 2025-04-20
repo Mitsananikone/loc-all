@@ -38,9 +38,9 @@ function ChildCare({ onClose }) {
   return (
     <div className={styles.centerContainer}>
       {/* Header */}
-      <h1 className={styles.title}>
+      <h2 className={styles.title}>
         <i className="fa-solid fa-child" aria-hidden="true"></i> Child Care
-      </h1>
+      </h2>
 
       {/* Carousel */}
       <div className={styles.carouselContainer}>

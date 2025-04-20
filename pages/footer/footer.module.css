@@ -156,10 +156,6 @@
     color: var(--primary-color);
   }
   
-  .policyPage h1 {
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-  }
   
   .policyPage h2 {
     color: var(--primary-color);

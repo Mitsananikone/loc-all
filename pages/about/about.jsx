@@ -15,7 +15,7 @@ function About() {
               className={styles.logoImage}
             />
           </div>
-          <h1 className={styles.title}>About the Name and Logo</h1>
+          <h2 className={styles.title}>About the Name and Logo</h2>
         </div>
 
         {/* First Parallelogram */}

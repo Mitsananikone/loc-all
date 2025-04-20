@@ -31,9 +31,9 @@ function Resources() {
     <div className="centerContainer">
       <div className="background">
         {/* Header */}
-        <h1 className="title">
+        <h2 className="title">
           <i className="fa-solid fa-oil-well" aria-hidden="true"></i> Resources
-        </h1>
+        </h2>
         <h3>To carry out this project, we need the following resources:</h3>
 
         
@@ -58,9 +58,9 @@ function Resources() {
         ))}
 
         {/* Additional Sections */}
-        <h1 className="title" style={{ marginTop: "100px" }}>
+        <h2 className="title" style={{ marginTop: "100px" }}>
           <i className="fa-solid fa-people-roof" aria-hidden="true"></i> We Need You
-        </h1>
+        </h2>
         <p className="description">
           We aim to launch with 30-40 adults from Heights Baptist Church,
           providing a solid base of committed members to support and grow Living
@@ -78,9 +78,9 @@ function Resources() {
           but only for a temporary time.
         </p>
 
-        <h1 className="title" style={{ marginTop: "100px" }}>
+        <h2 className="title" style={{ marginTop: "100px" }}>
           <i className="fa-solid fa-church" aria-hidden="true"></i> We Need Funding
-        </h1>
+        </h2>
         <p className={styles.description}>
           We are blessed to have financial support from our sending church,
           Heights Baptist Church, the North American Mission Board (NAMB), The

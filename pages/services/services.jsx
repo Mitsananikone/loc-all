@@ -54,9 +54,9 @@ function Services() {
   return (
     <div className={styles.centerContainer}>
       <div>
-        <h1 className={styles.title}>
+        <h2 className={styles.title}>
           <i className="fa-solid fa-church" aria-hidden="true"></i> Services
-        </h1>
+        </h2>
 
         <div className={styles.servicesContainer}>
           {services.map((service) => (

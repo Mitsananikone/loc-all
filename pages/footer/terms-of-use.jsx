@@ -21,7 +21,7 @@ const TermsOfUse = () => {
 
   return (
     <div className={styles.policyPage}>
-      <h1>Terms of Use</h1>
+      <h2>Terms of Use</h2>
       <p><strong>Last Updated:</strong> 03/29/2025</p>
 
       <section>

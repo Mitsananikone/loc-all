@@ -9,9 +9,9 @@ function Plan() {
     <div className={styles.container}>
       {/* Header Section */}
       <div className={styles.header}>
-        <h1 className={styles.title}>
+        <h2 className={styles.title}>
           <i className="fa-solid fa-clipboard-list" aria-hidden="true"></i> The Plan
-        </h1>
+        </h2>
       </div>
 
       {/* Main Content Section */}
@@ -51,7 +51,7 @@ function Plan() {
                   height="60px"
                   color="var(--primary-color)"
                 >
-                  <h1 className={styles.parallelogramNumber}>{item.number}</h1>
+                  <h2 className={styles.parallelogramNumber}>{item.number}</h2>
                 </Parallelogram>
                 <div className={styles.textContent}>
                   <h2>{item.title}</h2>

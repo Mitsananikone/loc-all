@@ -69,9 +69,9 @@ function MeetPerrins() {
     <div style={styles.centerContainer}>
       <div>
         {/* Header */}
-        <h1 style={styles.title}>
+        <h2 style={styles.title}>
           <FontAwesomeIcon icon={faUser} aria-hidden="true" /> Meet the Perrins
-        </h1>
+        </h2>
 
         {/* Cary Perrin Section */}
         <div style={styles.contentSection}>
@@ -120,9 +120,9 @@ function MeetPerrins() {
         </div>
 
         {/* Header */}
-        <h1 style={styles.title}>
+        <h2 style={styles.title}>
           <FontAwesomeIcon icon={faUsers} /> Answering the Call
-        </h1>
+        </h2>
 
         {/* Family Section */}
         <div style={styles.contentSection}>

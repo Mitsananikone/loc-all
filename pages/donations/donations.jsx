@@ -117,9 +117,9 @@ function Donations() {
   return (
     <div style={styles.centerContainer}>
       {/* Header */}
-      <h1 style={{ fontSize: "1.5rem", color: "var(--primary-color)", textAlign: "center", marginBottom: "40px" }}>
+      <h2 style={{ fontSize: "1.5rem", color: "var(--primary-color)", textAlign: "center", marginBottom: "40px" }}>
         <i className="fa-solid fa-hand-holding-heart" aria-hidden="true"></i> Donations
-      </h1>
+      </h2>
 
       {/* Donation Card */}
       <div style={styles.card}>

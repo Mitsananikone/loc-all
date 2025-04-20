@@ -38,9 +38,9 @@ function SundayWorship({ onClose }) {
   return (
     <div className={styles.centerContainer}>
       {/* Header */}
-      <h1 className={styles.title}>
+      <h2 className={styles.title}>
         <i className="fa-solid fa-users" aria-hidden="true"></i> Sunday Worship
-      </h1>
+      </h2>
 
       {/* Carousel */}
       <div className={styles.carouselContainer}>

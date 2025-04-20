@@ -113,9 +113,9 @@ function Mission() {
   return (
     <div className={styles.centerContainer}>
       {/* Header */}
-      <h1 className={styles.header}>
+      <h2 className={styles.header}>
         <i className="fa-solid fa-hand-holding-heart" aria-hidden="true"></i> Our Mission
-      </h1>
+      </h2>
 
       {/* Mission Cards */}
       {missionData.map((mission, index) => (
@@ -158,9 +158,9 @@ function Mission() {
       ))}
 
       {/* Why Alvin Section */}
-      <h1 className={styles.header}>
+      <h2 className={styles.header}>
         <i className="fa-solid fa-location-dot" aria-hidden="true"></i> Why Alvin?
-      </h1>
+      </h2>
       <div className={styles.whyAlvinContainer}>
         <img
           src="/images/alvinNeighborhood.png"

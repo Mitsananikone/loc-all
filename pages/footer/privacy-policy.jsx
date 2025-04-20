@@ -22,7 +22,7 @@ const PrivacyPolicy = () => {
 
   return (
     <div className={styles.policyPage}>
-      <h1>Privacy Policy</h1>
+      <h2>Privacy Policy</h2>
       <p><strong>Last Updated:</strong> 03/29/2025</p>
 
       <section>
