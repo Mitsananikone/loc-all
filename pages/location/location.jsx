@@ -6,9 +6,9 @@ function Location() {
     <div className={styles.centerContainer}>
       <div>
         {/* Header */}
-        <h1 className={styles.title}>
+        <h2 className={styles.title}>
           <i className="fa-solid fa-map-marker-alt" aria-hidden="true"></i> Location
-        </h1>
+        </h2>
 
         {/* Location Image */}
         <div className={styles.imageContainer}>
