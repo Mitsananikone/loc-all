@@ -64,12 +64,7 @@ const PrivacyPolicy = () => {
         <p>Updates will be posted here with a new "Last Updated" date.</p>
       </section>
 
-      <div className={styles.contactSection}>
-        <h3>Contact Us</h3>
-        <p> Living Oaks Church<br />
-        [Cary's email]<br />
-        [Cary's Phone number]</p>
-      </div>
+
  
      <div className={styles.backButtonContainer}>
      <button 
