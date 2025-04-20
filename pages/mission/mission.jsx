@@ -137,7 +137,7 @@ function Mission() {
                 left="0vw"
               >
                 <div className={styles.missionNumberContainer}>
-                  <h1 className={styles.missionNumber}>{mission.number}</h1>
+                  <h2 className={styles.missionNumber}>{mission.number}</h2>
                 </div>
               </Parallelogram>
             </div>
