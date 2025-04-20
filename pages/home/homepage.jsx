@@ -61,12 +61,12 @@ function HomePage() {
              
                 CHURCH
               </h1>
-              <h6>
-                <p style={{ color: "white" }}>
+              <h6 style={{ color: "white" }}>
+                
                   ...that they may be called oaks of righteousness, the planting
                   of the Lord, that he may be glorified.
                   <br /> - Isaiah 61:3
-                </p>
+               
               </h6>
               <div className={styles.separationLine}></div>
               <h4 className={styles.subtitle}>
