@@ -32,9 +32,9 @@ function Location() {
           </p>
           <br />
           <p>
-            <b>
+           
               <i> Living Oaks Church is located at Alvin Community College Building C, Floor 2</i>
-            </b>
+          
           </p>
         </div>
 

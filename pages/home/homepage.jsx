@@ -42,13 +42,13 @@ function HomePage() {
         {/* First Parallelogram - slides in from left */}
         <div className={styles.animateLeft}>
           <Parallelogram
-            width={screenWidth < 768 ? "70vw" : screenWidth < 1024 ? "60vw" : "40vw"}
+            width={screenWidth < 768 ? "80vw" : screenWidth < 1024 ? "60vw" : "40vw"}
             
             height={screenWidth < 768 ? "60vh" : "70vh"}
             color="var(--primary-color)"
-            top="5vh"
+            top="8vh"
             left={
-              screenWidth < 768 ? "12vw" : screenWidth < 1024 ? "8vw" : "0vw" // Further right on large screens
+              screenWidth < 768 ? "10vw" : screenWidth < 1024 ? "8vw" : "0vw" // Further right on large screens
             }
             zIndex="1"
             scale="1"
@@ -81,15 +81,15 @@ function HomePage() {
         <div className={styles.animateRight}>
           <Parallelogram
             width={
-              screenWidth < 768 ? "40vw" : screenWidth < 1024 ? "30vw" : "auto" // Wider on large screens
+              screenWidth < 768 ? "40vw" : screenWidth < 1024 ? "30vw" : "00vh" // Wider on large screens
             }
       
             height={
-              screenWidth < 768 ? "45vh" : screenWidth < 1024 ? "50vh" : "60vh" // Taller on large screens
+              screenWidth < 768 ? "20vh" : screenWidth < 1024 ? "50vh" : "60vh" // Taller on large screens
             }
-            top="10vh"
+            top="8vh"
             left={
-              screenWidth < 768 ? "20vw" : screenWidth < 1024 ? "16vh" : "10vh" // Further right on large screens
+              screenWidth < 768 ? "26vw" : screenWidth < 1024 ? "16vh" : "10vh" // Further right on large screens
             }
             backImage="url('/images/LOCoakHomepage.jpg')"
             zIndex="2"

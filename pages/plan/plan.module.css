@@ -21,7 +21,7 @@
   justify-content: center; /* Horizontally centers the content */
   align-items: center; /* Vertically centers the content */
   padding: 1rem; /* Optional: Adds some padding */
-  text-align: center; /* Ensures text within h1 is centered */
+  text-align: center; 
 }
 
 .imageContainer {
