@@ -20,6 +20,8 @@
   
   .footerSection {
     margin-bottom: 2rem;
+    width: fit-content; /* This makes the section only as wide as its content */
+  max-width: 100%; /* Ensures it doesn't overflow on small screens */
   }
   
   .footerHeading {
@@ -198,7 +200,7 @@
   @media (max-width: 768px) {
     .footerContent {
       grid-template-columns: 1fr;
-      gap: 1.5rem;
+      gap: 1rem;
     }
     
     .footerSection {

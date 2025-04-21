@@ -42,9 +42,9 @@ function HomePage() {
         {/* First Parallelogram - slides in from left */}
         <div className={styles.animateLeft}>
           <Parallelogram
-            width={screenWidth < 768 ? "80vw" : screenWidth < 1024 ? "60vw" : "40vw"}
+            width={screenWidth < 768 ? "90vw" : screenWidth < 1024 ? "60vw" : "40vw"}
             
-            height={screenWidth < 768 ? "60vh" : "70vh"}
+            height={screenWidth < 768 ? "65vh" : "70vh"}
             color="var(--primary-color)"
             top="8vh"
             left={
