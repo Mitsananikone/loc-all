@@ -3,10 +3,7 @@ module.exports = {
     generateRobotsTxt: true, // Optional
     exclude: [
        // 🚫 Exclude duplicate or unwanted paths
-    '/donations/donations', 
-    '/about/about',
-    '/location/location',
-    '/mission/mission',
+
     '/server-sitemap.xml',  // Default exclusion for API routes
     '/404',                 // Exclude error pages
     '/admin',               // Exclude admin panels
