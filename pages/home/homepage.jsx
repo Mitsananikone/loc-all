@@ -32,8 +32,23 @@ function HomePage() {
       opacity: fadeInImages ? 1 : 0,
     },
     title: {
-      fontSize: screenWidth < 768 ? "2rem" : "1.6rem",
-    },
+    fontSize: screenWidth < 480 ? "2rem" :  // Extra small devices
+             screenWidth < 768 ? "1.7rem" :     // Small devices
+             screenWidth < 1024 ? "1.6rem" : // Medium devices
+             "2rem",                       // Large devices (1024px and up)
+    lineHeight: screenWidth < 480 ? "1.2" :  // Responsive line height
+               screenWidth < 768 ? "1.3" :
+               "1.4",
+    padding: screenWidth < 480 ? "0.5rem" :  // Responsive padding
+             screenWidth < 768 ? "0.8rem" :
+             "1rem"
+  },
+  subtitle: {
+    fontSize: screenWidth < 480 ? "1rem" :
+              screenWidth < 768 ? "1.2rem" :
+              screenWidth < 1024 ? "1.1rem" :
+              "1rem"
+  }
   };
 
   return (
@@ -42,13 +57,20 @@ function HomePage() {
         {/* First Parallelogram - slides in from left */}
         <div className={styles.animateLeft}>
           <Parallelogram
-            width={screenWidth < 768 ? "90vw" : screenWidth < 1024 ? "60vw" : "40vw"}
-            
+            width={
+              screenWidth < 480 ? "80vw" : // New breakpoint for very small screens
+            screenWidth < 768 ? "70vw" : 
+            screenWidth < 1024 ? "60vw" : 
+            "40vw" 
+            }
             height={screenWidth < 768 ? "65vh" : "70vh"}
             color="var(--primary-color)"
             top="8vh"
-            left={
-              screenWidth < 768 ? "10vw" : screenWidth < 1024 ? "8vw" : "0vw" // Further right on large screens
+            left={ 
+              screenWidth < 480 ? "10vw" : // New breakpoint for very small screens
+              screenWidth < 768 ? "8vw" : 
+              screenWidth < 1024 ? "0vw" : 
+              "-15vw"
             }
             zIndex="1"
             scale="1"
@@ -80,20 +102,24 @@ function HomePage() {
         {/* Second Parallelogram - slides in from right */}
         <div className={styles.animateRight}>
           <Parallelogram
-            width={
-              screenWidth < 768 ? "40vw" : screenWidth < 1024 ? "30vw" : "00vh" // Wider on large screens
-            }
+           width={
+            screenWidth < 480 ? "50vw" : // New breakpoint for very small screens
+            screenWidth < 768 ? "40vw" : 
+            screenWidth < 1024 ? "30vw" : 
+            "20vw"
+          }
       
-            height={
-              screenWidth < 768 ? "20vh" : screenWidth < 1024 ? "50vh" : "60vh" // Taller on large screens
-            }
+            height= "60vh"
             top="8vh"
             left={
-              screenWidth < 768 ? "26vw" : screenWidth < 1024 ? "16vh" : "10vh" // Further right on large screens
+              screenWidth < 480 ? "-1vw" : // New breakpoint for very small screens
+              screenWidth < 768 ? "5vw" : 
+              screenWidth < 1024 ? "-5vw" : 
+              "-20vw"
             }
             backImage="url('/images/LOCoakHomepage.jpg')"
             zIndex="2"
-            scale="2"
+            scale="1"
           >
             <div className={styles.parallelogramImage}></div>
           </Parallelogram>

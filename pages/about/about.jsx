@@ -21,12 +21,19 @@ function About() {
         {/* First Parallelogram */}
         <div className={styles.parallelogramWrapper}>
           <Parallelogram
+            width="80vw" // Default width
+            height="40vh" // Height of the parallelogram
+            color="var(--secondary-color)"
+            top="-2vh"
+            zIndex="-2"
+          >
+             {/* <Parallelogram
             width="600px" // Default width
             height="350px" // Height of the parallelogram
             color="var(--secondary-color)"
             top="-2vh"
             zIndex="-2"
-          >
+          ></Parallelogram> */}
             <div className={styles.parallelogramContent}>
               <p>
                 The city of Alvin is known for its Southern Oak Trees. The
@@ -40,8 +47,8 @@ function About() {
         {/* Second Parallelogram */}
         <div className={styles.parallelogramWrapper}>
           <Parallelogram
-            width="700px" // Default width
-            height="550px" // Height of the parallelogram
+            width="80vw" // Default width
+            height="50vh" // Height of the parallelogram
             top="-1vh"
             backImage="url('/images/Kintsugi.png')"
             zIndex="2"

@@ -6,46 +6,40 @@ const Parallelogram = ({ width, height, color, top, left, children, backImage, z
     <div
       className={styles.parallelogram}
       style={{
-        width: width || "200px", // Default width
-        height: height || "100px", // Default height
+        width: width || "200px",
+        height: height || "100px",
         backgroundColor: color,
-        top: top || "0", // Default top position
-        left: left || "0", // Default left position
-        backgroundImage: backImage,
-        backgroundPosition: "-40vw center", 
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "auto",
+        top: top || "0",
+        left: left || "0",
         zIndex: zIndex || 1,
-        scale: scale  }}
+        scale: scale,
+        overflow: "hidden",
+        transformOrigin: "center center",
+        // Only apply background styles here if no backImage prop
+        ...(!backImage && {
+          backgroundImage: "none",
+          backgroundPosition: "center center",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover"
+        })
+      }}
     >
+      {/* Only render background image layer if backImage is provided */}
+      {backImage && (
+        <div 
+          className={styles.backgroundImage}
+          style={{
+            backgroundImage: backImage,
+            backgroundPosition: "center center",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+          }}
+        />
+      )}
+      
       <div className={styles.content}>{children}</div>
     </div>
   );
 };
 
 export default Parallelogram;
-
-
-// This is the working copy
-// const Parallelogram = ({ width, height, color, top, left, children, backImage }) => {
-//   return (
-//     <div
-//       className={styles.parallelogram}
-//       style={{
-//         width: width || "200px", // Default width
-//         height: height || "100px", // Default height
-//         backgroundColor: color,
-//         top: top || "0", // Default top position
-//         left: left || "0", // Default left position
-//         backgroundImage:  backImage,
-//         backgroundRepeat: "no-repeat",
-//         backgroundSize: "cover",
-//         zIndex: 1,
-//       }}
-//     >
-//       <div className={styles.content}>{children}</div>
-//     </div>
-//   );
-// };
-
-// export default Parallelogram;

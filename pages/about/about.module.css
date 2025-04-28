@@ -61,7 +61,7 @@
   display: flex;
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
-  margin-bottom: 20px; /* Space between the two parallelograms */
+  margin-bottom: -10vh; /* Space between the two parallelograms */
 }
 
 /* Parallelogram Content */
@@ -69,10 +69,10 @@
   position: relative;
   z-index: 1;
   text-align: left;
-  transform: skew(20deg);
+  /* transform: skew(20deg); */
   padding: 30px; /* Increased padding to ensure text stays inside */
   color: var(--primary-color);
-  font-size: medium;
+  font-size: 1rem;
   width: 100%; /* Ensure content takes full width */
   box-sizing: border-box; /* Include padding in width calculation */
   overflow: hidden; /* Prevent text from overflowing */
@@ -118,7 +118,7 @@
   }
 
   .parallelogramContent {
-    font-size: medium; /* Default font size for desktops */
+    font-size: 1rem; /* Default font size for desktops */
     padding: 30px; /* Default padding for desktops */
   }
 }

@@ -1,17 +1,27 @@
 .parallelogram {
   position: relative;
   display: inline-block;
-  transform: skew(-20deg); /* Adjust skew angle */
+  transform: skew(-20deg);
   text-align: left;
-  position: relative; /* Relative positioning */
 }
 
-.parallelogram .content {
-  transform: skew(20deg); /* Reverse skew for content */
+.backgroundImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  transform: skew(20deg); 
+  z-index: -1;
+}
+
+.content {
+  transform: skew(20deg);
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) skew(20deg);
   text-align: left;
+
 }
 
